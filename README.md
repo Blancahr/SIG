@@ -1,5 +1,22 @@
-# Vue 3 + Vite
+# Sistema Interno de Gestión (SIG) – Sprint 1
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Descripción
+Desarrollo del Sprint 1 del proyecto Sistema Interno de Gestión (SIG), enfocado en el registro inicial de documentos y la captura de datos del solicitante.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## Historias de Usuario Implementadas
+- HU-01: Registro de documentos.
+- HU-02: Captura de datos del solicitante.
+
+## Tecnologías utilizadas
+- Vue.js 3
+- Vite
+- JavaScript
+
+## Funcionalidades
+- Registro digital de documentos.
+- Captura de información del solicitante.
+- Asociación de solicitante al documento.
+- Validación básica y pruebas locales.
+
+## Estado del Sprint
+Sprint 1 completado exitosamente.

@@ -1,13 +1,21 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>sig</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
-</html>
+<section id="gestion-documentos">
+    <h2>Seguimiento de Trámites - Sprint 2</h2>
+    
+    <div class="report-summary">
+        <p>Total de Trámites: <span id="total-docs">0</span> | 
+           Finalizados: <span id="docs-finalizados">0</span> (HU-05)</p>
+    </div>
+
+    <table id="tabla-seguimiento">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Documento</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="lista-tramites">
+            </tbody>
+    </table>
+</section>

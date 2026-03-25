@@ -53,12 +53,39 @@
 
       <button type="submit">Guardar documento</button>
     </form>
+
+    <hr />
+
+<TablaDocumentos :documentos="documentos" />
+
+<hr />
+
+<Reportes :documentos="documentos" />
+
+<hr />
+
+<Usuarios />
+
   </div>
 </template>
 
+
+
+
 <script>
+import Usuarios from './components/Usuarios.vue'
+import Reportes from './components/Reportes.vue'
+import TablaDocumentos from './components/TablaDocumentos.vue'
+
 export default {
   name: 'App',
+
+  components: {
+    Usuarios,
+    Reportes,
+    TablaDocumentos
+  },
+
   data() {
     return {
       documento: {
@@ -72,15 +99,33 @@ export default {
           tipo: '',
           contacto: ''
         }
-      }
+      },
+
+      documentos: [
+        { id: "SIG-001", nombre: "Oficio A", estado: "Recibido" },
+        { id: "SIG-002", nombre: "Reporte", estado: "En proceso" }
+      ]
     }
   },
+
   methods: {
     guardarDocumento() {
+      if (!this.documento.folio || !this.documento.tipo) {
+        alert("Faltan campos obligatorios")
+        return
+      }
+
+      this.documentos.push({
+        id: this.documento.folio,
+        nombre: this.documento.tipo,
+        estado: "Recibido"
+      })
+
       console.log('Documento registrado:', this.documento)
       alert('Documento registrado correctamente')
       this.limpiarFormulario()
     },
+
     limpiarFormulario() {
       this.documento = {
         folio: '',
